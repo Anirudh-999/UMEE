@@ -86,3 +86,27 @@ The project is structured with scalability and future enhancements in mind, enab
 ---
 
  
+## Getting Started  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/yourusername/close-connect.git
+2. Navigate to the project directory:
+   ```bash
+   cd close-connect  
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt  
+4. Start the Flask server:
+   ```bash
+   python app.py
+5. (Optional) Ngrok
+   - Create your account in ngrok.
+   - run below commands in terminal.
+   ```bash
+   ngrok config add-authtoken {your-token}
+   ngrok http 5000
+   
+   
+   
+   
