@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4e8aff">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/192x192image.jpeg') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Close Connect">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Close Connect - Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/connect.png')}}" alt="Close Connect Logo">
+            <span>CLOSE CONNECT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('friends') }}" class="active">Friends</a></li>
+                <li><a href="{{ url_for('explore') }}">Explore</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chat-container">
+        <div class="sidebar">
+            <div class="profile-box">
+                <img src="{{url_for('static', filename='images/boy.png')}}" alt="User Avatar">
+                <span class="user-name">John Doe</span>
+                <span class="user-status">Living life one code at a time</span>
+            </div>
+            
+            <div class="user-stats">
+                <div class="stat-section">
+                    <span class="stat-label">Friends</span>
+                    <span class="stat-value">150</span>
+                </div>
+                <div class="stat-section">
+                    <span class="stat-label">Active</span>
+                    <span class="stat-value">Now</span>
+                </div>
+            </div>
+
+            <div class="activity-btn">
+                <span>Activities</span>
+                <div class="activity-item">
+                    <img src="{{url_for('static', filename='images/golf.png')}}" alt="Activity">
+                    <span>Golf club Mumbai</span>
+                </div>
+                <div class="activity-item">
+                    <img src="{{url_for('static', filename='images/gym.jpeg')}}" alt="Activity">
+                    <span>Get fit gym</span>
+                </div>
+                <div class="activity-item">
+                    <img src="{{url_for('static', filename='images/coffee.png')}}" alt="Activity">
+                    <span>The coffee club</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-main">
+                       
+            <div class="messages-container">
+                <!-- Messages will be populated here -->
+            </div>
+            
+            <div class="message-input">
+                <input type="text" placeholder="Type a message...">
+                <button class="send-btn">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/static/js/service-worker.js')
+              .then(registration => {
+                console.log('ServiceWorker registration successful');
+              })
+              .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+        }
+      </script>
+</body>
+</html> 

@@ -1,0 +1,342 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #7D33D0;  /* Match the purple theme */
+}
+
+/* Header/Navbar */
+header {
+    background: linear-gradient(to right, #4e8aff, #004db3);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    height: 30px;
+    margin-right: 10px;
+    rotate: 45deg; 
+  }
+  
+  header .logo span {
+    font-family: 'Luckiest Guy', Montserrat;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  header nav ul li a.active {
+    color: #ff54e0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+/* Search Section */
+.search-bar {
+    background: #450079;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar select {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: #83c7ff;
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    width: 200px;
+}
+
+.search-bar h1 {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    width: 300px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #83c7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search button:hover {
+    background: #6422a8;
+}
+
+/* Club List */
+.club-list {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.club-card {
+    background: #925FF6;
+    padding: 15px;  /* Reduced padding */
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;  /* Changed from center to flex-start */
+    gap: 12px;  /* Reduced gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: calc(100% - 30px);  /* Account for padding */
+    margin: 0 auto;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+.club-card img {
+    width: 60px;  /* Smaller image */
+    height: 60px;  /* Smaller image */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;  /* Thinner border */
+    flex-shrink: 0;
+}
+
+.club-details {
+    flex-grow: 1;
+}
+
+.club-details h2 {
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.club-details p {
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.club-details strong {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    margin: 0 1rem;
+    color: #7D33D0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #6422a8;
+}
+
+.copyright {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.pagination button {
+    background-color: #add8e6;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4e8aff;
+    transition: all 0.3s ease;
+}
+
+.pagination button.active {
+    background-color: #4e8aff;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #4e8aff;
+    color: white;
+}
+
+.club-join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;  /* Push to the right */
+    padding-left: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);  /* Subtle separator */
+}
+
+.club-join p {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.club-join button {
+    background-color: #7D33D0;  /* Darker purple */
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.club-join button:hover {
+    background-color: #6422a8;  /* Even darker on hover */
+    transform: scale(1.05);  /* Slight grow effect */
+}
+
+@media screen and (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .search-bar select {
+        width: 100%;
+    }
+
+    .search-bar h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .club-list {
+        padding: 10px;
+    }
+
+    .club-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        width: calc(100% - 24px);
+    }
+
+    .club-details {
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    .club-details h2 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .club-details p {
+        font-size: 0.85rem;
+        margin: 4px 0;
+    }
+
+    .club-join {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 8px;
+        margin-top: 8px;
+        padding-left: 0;
+    }
+
+    .club-join p {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+
+    .club-join button {
+        padding: 6px 20px;
+        font-size: 0.9rem;
+    }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}

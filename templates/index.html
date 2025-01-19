@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4e8aff">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/192x192image.jpeg') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Close Connect">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Close Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{url_for('static', filename='images/connect.png')}}" alt="Close Connect Logo">
+      <span>CLOSE CONNECT</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+        <li><a href="{{ url_for('friends') }}">Friends</a></li>
+        <li><a href="{{ url_for('explore') }}">Explore</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>HERE TO CONNECT?</h1>
+        <p>Break the Barriers</p>
+        <a class = "connect-btn"href="{{ url_for('login') }}">Connect</a>
+      </div>
+      <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/people.png') }}" alt="Connecting People">
+      </div>
+    </section>
+
+    <div class="about-container">
+        <div class="about">
+            <div class="about-text">
+                <h2>Close Connect is a web-based platform designed to foster meaningful connections within communities.</h2>
+                <p>We aim to bridge communication gaps and strengthen community bonds.</p>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/screws.png') }}" alt="Teamwork and Gears">
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <h3>SOCIALS</h3>
+    <div class="social-links">
+      <a href="https://twitter.com/closeconnect" target="_blank">Twitter</a>
+      <a href="https://instagram.com/closeconnect" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/company/closeconnect" target="_blank">LinkedIn</a>
+      <a href="https://facebook.com/closeconnect" target="_blank">Facebook</a>
+      <a href="mailto:contact@closeconnect.com">Email</a>
+    </div>
+  </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/static/js/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

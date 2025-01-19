@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, #4e8aff, #004db3);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    height: 30px;
+    margin-right: 10px;
+    rotate: 45deg; 
+  }
+  
+  header .logo span {
+    font-family: 'Luckiest Guy', Montserrat;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  header nav ul li a.active {
+    color: #ff54e0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background:#7D33D0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 70px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .connect-btn {
+    background-color: #00bfff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 120px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .hero-content .connect-btn:hover {
+    background-color: #0073e6;
+    transform: scale(1.05);
+  }
+  
+  .hero-image img {
+    width: 400px;
+    height: auto;
+  }
+  
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: #f5f5f5;
+  }
+  
+  .about-text {
+    max-width: 50%;
+  }
+  
+  .about-text h2 {
+    color: #3e067d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+  }
+  
+  .about-image img {
+    width: 400px;
+    height: auto;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ededed;
+  }
+  
+  .social-links {
+    margin: 1rem 0;
+  }
+  
+  .social-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #7D33D0;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    color: #6422a8;
+  }
+  
+  .copyright {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header nav ul li {
+        margin: 5px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .logo span {
+        font-size: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+
+    .connect-btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+  }
+
+  /* For very small screens */
+  @media screen and (max-width: 480px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .logo span {
+        font-size: 1.8rem;
+    }
+  }
+  

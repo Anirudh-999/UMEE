@@ -1,0 +1,26 @@
+{
+    "name": "Close Connect",
+    "short_name": "CloseConnect",
+    "description": "Connect with people sharing similar interests",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#7D33D0",
+    "theme_color": "#4e8aff",
+    "orientation": "any",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "/static/images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/static/images/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }
+  
