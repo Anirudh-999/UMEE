@@ -105,8 +105,4 @@ The project is structured with scalability and future enhancements in mind, enab
    - run below commands in terminal.
    ```bash
    ngrok config add-authtoken {your-token}
-   ngrok http 5000
-   
-   
-   
-   
+   ngrok http 5000 
