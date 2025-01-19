@@ -2,7 +2,7 @@
 
 **Close Connect** is a Progressive Web Application (PWA) designed to connect like-minded communities and bridge communication gaps. It combines the power of Flask for backend operations, gRPC for real-time communication, and modern web technologies for a seamless and responsive user experience.  
 
-## 📋 Overview  
+##Overview  
 Close Connect focuses on fostering communication by offering features like:  
 - Real-time chat functionality  
 - Friend management  
@@ -60,7 +60,7 @@ The project is structured with scalability and future enhancements in mind, enab
 
 ---
 
-## 🔧 Scalability and Design  
+##Scalability and Design  
 
 ### Scalability  
 - **Backend:**  
